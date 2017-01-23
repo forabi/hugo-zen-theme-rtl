@@ -1,0 +1,31 @@
+{{ partial "header.html" . }}
+
+	<main role="main">
+		<article itemscope itemtype="http://schema.org/BlogPosting">
+			<h1 class="entry-title" itemprop="headline">{{ .Title }}</h1>
+			<span class="entry-meta"><time itemprop="datePublished" datetime="{{ .Date.Format "02/01/2006" }}">{{ .Date.Format "02/01/2006" }}</time></span>
+			<!--{{ if .IsTranslated }}
+				<div dir="ltr" class="note multi-lang">
+					This post is also available in other languages:
+					{{ range .Translations }}
+						<a href="{{ .Permalink }}">
+							{{ .Title }}
+						</a>
+					{{ end}}
+				</div>
+			{{ end }}-->
+			<section class="entry-text" itemprop="entry-text">
+				{{ .Content }}
+			</section>
+			<template id="toc-template">
+				<details class="toc">
+					<summary>جدول المحتويات</summary>
+					<p>
+					{{ .TableOfContents }}
+					</p>
+				</details>
+			</template>
+		</article>
+	</main>
+
+{{ partial "footer.html" . }}

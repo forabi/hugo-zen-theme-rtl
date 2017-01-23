@@ -1,0 +1,31 @@
+baseurl = "https://example.com"
+languageCode = "ar"
+title = "مدونتي"
+theme = "hugo-zen"
+enableEmoji = true
+DefaultContentLanguage = "ar"
+
+[params]
+  logo      = "/images/logo.jpg"
+  twitter   = "https://twitter.com/example"
+  github    = "https://github.com/example"
+  email     = "someone@example.com"
+  analytics = "<Your Google Analytics ID>"
+  copyright = "كل المحتوى مرخص تحت رخصة CC BY-NC 2.0 ما لم يُنص على غيرها."
+
+[Languages]
+[Languages.ar]
+[Languages.ar.params]
+[Languages.en]
+  title = "My blog"
+  copyright = "Unless otherwise stated, all content is licensed under CC BY-NC 2.0."
+[Languages.en.params]
+
+[blackfriday]
+  angledQuotes = true
+  taskLists = true
+  footnotes = true
+  tables = true
+  extensions = [
+    "STRIKETHROUGH"
+  ]
